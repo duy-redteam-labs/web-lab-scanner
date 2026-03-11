@@ -1,0 +1,20 @@
+target: http://192.168.168.30:3000/
+max_depth: 2
+max_pages: 30
+timeout: 5
+
+auth:
+  cookies: []
+  headers:
+    - "User-Agent: WebLabScanner/0.1.0"
+
+checks:
+  headers: true
+  cookies: true
+  csrf: true
+  xss: true
+  sqli: true
+
+output:
+  json: examples/sample_report.json
+  html: examples/sample_report.html

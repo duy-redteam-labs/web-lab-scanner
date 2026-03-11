@@ -1,0 +1,2 @@
+[console_scripts]
+web-lab-scanner = web_lab_scanner.cli:main

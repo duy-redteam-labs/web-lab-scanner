@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: web-lab-scanner
+Version: 0.1.0
+Summary: Session-aware web application lab scanner for lab environments.
+Author: Ngoc Duy
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.32.0
+Requires-Dist: beautifulsoup4>=4.12.0
+Requires-Dist: jinja2>=3.1.0
+Requires-Dist: pyyaml>=6.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Dynamic: license-file
+
+# Web Lab Scanner
+
+Session-aware web application lab scanner built in Python for DVWA, Juice Shop, and similar training targets.
+
+## Features
+- Internal crawling with scope controls
+- Cookie and header-based authenticated scanning
+- Security header analysis
+- Cookie flag analysis
+- CSRF token heuristics
+- Reflected XSS indicator probing
+- SQL error indicator probing
+- JSON and HTML reporting
+
+## Status
+Milestone 1 scaffold is in progress.
+
+## Usage
+
+    web-lab-scanner scan http://127.0.0.1:3000
+
+## Safety
+Use only against systems you own or are explicitly authorized to test.

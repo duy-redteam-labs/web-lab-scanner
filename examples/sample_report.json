@@ -1,0 +1,68 @@
+{
+  "target": "http://192.168.168.30:3000/",
+  "findings": [
+    {
+      "id": "header-missing-content_security_policy",
+      "category": "headers",
+      "title": "Missing Content-Security-Policy header",
+      "severity": "Medium",
+      "confidence": "High",
+      "url": "http://192.168.168.30:3000/",
+      "method": "GET",
+      "parameter": null,
+      "evidence": "Content-Security-Policy header was not present in the response.",
+      "recommendation": "Define a Content-Security-Policy header to reduce XSS impact."
+    },
+    {
+      "id": "header-missing-referrer_policy",
+      "category": "headers",
+      "title": "Missing Referrer-Policy header",
+      "severity": "Low",
+      "confidence": "High",
+      "url": "http://192.168.168.30:3000/",
+      "method": "GET",
+      "parameter": null,
+      "evidence": "Referrer-Policy header was not present in the response.",
+      "recommendation": "Set a Referrer-Policy header to reduce referrer leakage."
+    },
+    {
+      "id": "header-missing-permissions_policy",
+      "category": "headers",
+      "title": "Missing Permissions-Policy header",
+      "severity": "Low",
+      "confidence": "High",
+      "url": "http://192.168.168.30:3000/",
+      "method": "GET",
+      "parameter": null,
+      "evidence": "Permissions-Policy header was not present in the response.",
+      "recommendation": "Set a Permissions-Policy header to restrict browser feature access."
+    }
+  ],
+  "pages_scanned": [
+    "http://192.168.168.30:3000/"
+  ],
+  "metadata": {
+    "max_depth": 2,
+    "max_pages": 30,
+    "timeout": 5,
+    "checks": {
+      "headers": true,
+      "cookies": true,
+      "csrf": true,
+      "xss": true,
+      "sqli": true
+    },
+    "status_code": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "forms_detected": 0
+  },
+  "summary": {
+    "total_findings": 3,
+    "by_severity": {
+      "High": 0,
+      "Medium": 1,
+      "Low": 2,
+      "Info": 0
+    }
+  }
+}

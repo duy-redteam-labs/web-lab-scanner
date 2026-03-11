@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Web Lab Scanner Report</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      color: #222;
+      background: #fafafa;
+    }
+    h1, h2, h3 {
+      margin-bottom: 0.4rem;
+    }
+    .meta, .summary, .finding {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .finding h3 {
+      margin-top: 0;
+    }
+    .severity {
+      font-weight: bold;
+    }
+    .High { color: #b00020; }
+    .Medium { color: #c77700; }
+    .Low { color: #2f6f44; }
+    .Info { color: #3366cc; }
+    code {
+      background: #f3f3f3;
+      padding: 0.1rem 0.3rem;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Web Lab Scanner Report</h1>
+
+  <div class="meta">
+    <h2>Scan Metadata</h2>
+    <p><strong>Target:</strong> http://192.168.168.30:3000/</p>
+    <p><strong>Pages Scanned:</strong> 1</p>
+    <p><strong>HTTP Status:</strong> 200</p>
+    <p><strong>Content-Type:</strong> text/html; charset=UTF-8</p>
+    <p><strong>Forms Detected:</strong> 0</p>
+  </div>
+
+  <div class="summary">
+    <h2>Summary</h2>
+    <p><strong>Total Findings:</strong> 3</p>
+    <ul>
+      <li>High: 0</li>
+      <li>Medium: 1</li>
+      <li>Low: 2</li>
+      <li>Info: 0</li>
+    </ul>
+  </div>
+
+  <div class="meta">
+    <h2>Pages Scanned</h2>
+    <ul>
+      
+      <li><code>http://192.168.168.30:3000/</code></li>
+      
+    </ul>
+  </div>
+
+  <h2>Findings</h2>
+  
+    
+    <div class="finding">
+      <h3>Missing Content-Security-Policy header</h3>
+      <p><span class="severity Medium">Medium</span> | Confidence: High</p>
+      <p><strong>Category:</strong> headers</p>
+      <p><strong>URL:</strong> <code>http://192.168.168.30:3000/</code></p>
+      <p><strong>Method:</strong> GET</p>
+      <p><strong>Parameter:</strong> N/A</p>
+      <p><strong>Evidence:</strong> Content-Security-Policy header was not present in the response.</p>
+      <p><strong>Recommendation:</strong> Define a Content-Security-Policy header to reduce XSS impact.</p>
+    </div>
+    
+    <div class="finding">
+      <h3>Missing Referrer-Policy header</h3>
+      <p><span class="severity Low">Low</span> | Confidence: High</p>
+      <p><strong>Category:</strong> headers</p>
+      <p><strong>URL:</strong> <code>http://192.168.168.30:3000/</code></p>
+      <p><strong>Method:</strong> GET</p>
+      <p><strong>Parameter:</strong> N/A</p>
+      <p><strong>Evidence:</strong> Referrer-Policy header was not present in the response.</p>
+      <p><strong>Recommendation:</strong> Set a Referrer-Policy header to reduce referrer leakage.</p>
+    </div>
+    
+    <div class="finding">
+      <h3>Missing Permissions-Policy header</h3>
+      <p><span class="severity Low">Low</span> | Confidence: High</p>
+      <p><strong>Category:</strong> headers</p>
+      <p><strong>URL:</strong> <code>http://192.168.168.30:3000/</code></p>
+      <p><strong>Method:</strong> GET</p>
+      <p><strong>Parameter:</strong> N/A</p>
+      <p><strong>Evidence:</strong> Permissions-Policy header was not present in the response.</p>
+      <p><strong>Recommendation:</strong> Set a Permissions-Policy header to restrict browser feature access.</p>
+    </div>
+    
+  
+</body>
+</html>
